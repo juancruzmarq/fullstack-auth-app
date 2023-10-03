@@ -36,11 +36,15 @@ export const SignIn = () => {
   }
 
   return (
-    <div className='flex items-center justify-center h-screen lg:grid lg:grid-cols-2'>
-      <div className='hidden justify-center items-center lg:flex'>
-        <img src='../../public/login.svg' alt='logo' />
+    <div className='flex h-screen lg:overflow-hidden items-center justify-center lg:grid lg:grid-cols-2 w-full lg:h-screen'>
+      <div className='hidden overflow-hidden h-full justify-center items-center lg:flex lg:w-full lg:col-span-1 lg:bg-opacity-10 lg:bg-gradient-to-r from-[#e2e0f6] to-[#d1cef9]'>
+        <img
+          src='../../public/fingerprint.svg'
+          alt='logo'
+          className='h-1/2 w-full lg:h-3/4 lg:w-3/4'
+        />
       </div>
-      <div className='flex flex-col items-center justify-center w-full gap-4'>
+      <div className='flex flex-col items-center justify-center w-full align-middle m-0 h-screen'>
         <h1 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#6c63ff] to-[#5a4fff] p-2 bac'>
           Sign in
         </h1>
