@@ -1,0 +1,27 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000' # Puerto de la aplicación React con Vite
+      - '8080:8080' # Puerto de la aplicación NestJS (ajusta según tu configuración)
+    volumes:
+      - .:/app # Monta el directorio actual en el contenedor
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: database
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: mypassword
+    ports:
+      - '5432:5432' # Puerto de la base de datos PostgreSQL
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
