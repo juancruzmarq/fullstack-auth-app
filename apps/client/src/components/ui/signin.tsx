@@ -39,7 +39,7 @@ export const SignIn = () => {
     <div className='flex h-screen lg:overflow-hidden items-center justify-center lg:grid lg:grid-cols-2 w-full lg:h-screen'>
       <div className='hidden overflow-hidden h-full justify-center items-center lg:flex lg:w-full lg:col-span-1 lg:bg-opacity-10 lg:bg-gradient-to-r from-[#e2e0f6] to-[#d1cef9]'>
         <img
-          src='../../public/fingerprint.svg'
+          src='/fingerprint.svg'
           alt='logo'
           className='h-1/2 w-full lg:h-3/4 lg:w-3/4'
         />
